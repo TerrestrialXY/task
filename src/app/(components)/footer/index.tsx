@@ -15,7 +15,7 @@ const IconsList = ({ icons }: IconListProps) => {
   return (
     <>
       {icons.map((icon) => (
-        <div key={icon.alt} className='w-8 h-8'>
+        <div key={icon.alt} className='w-10 h-12'>
           <a href={icon.url} target='_blank'>
             <Image
               height={100}
@@ -34,7 +34,7 @@ const IconsList = ({ icons }: IconListProps) => {
 const Footer = () => {
   const { SOCIAL, PAYMENTS } = useFooterLinks();
   return (
-    <footer className='hidden h-28 bg-primary text-gray-50 flex-col flex-wrap md:flex md:flex-row md:justify-between px-8 py-4'>
+    <footer className='hidden h-212 bg-primary text-gray-50 flex-col flex-wrap md:flex md:flex-row md:justify-between px-12 py-4'>
       <div className='flex justify-between items-center gap-12 px-6 py-4'>
         <IconsList icons={SOCIAL} />
       </div>
@@ -50,7 +50,7 @@ const Footer = () => {
           <Typography variant='h6' className='text-gray-50 font-semibold leading-none'>
             Trustpilot
           </Typography>
-          <span className='absolute -top-2.5 -right-8 text-lg'>4.3</span>
+          <span className='absolute -top-2.5 -right-12 text-lg'>4.3</span>
         </div>
 
         <Typography variant='h6' className='py-2'>

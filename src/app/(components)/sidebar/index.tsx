@@ -1,21 +1,7 @@
-import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Logo from '../logo/logo';
-import {
-  Baby,
-  House,
-  Info,
-  LayoutDashboard,
-  Mic,
-  ScrollText,
-  Store,
-  Sun,
-  Swords,
-} from 'lucide-react';
 import useSidebarIcons from '@/app/(hooks)/useSidebarMenu';
-
-
 
 const Sidebar = () => {
   const {MENU_ITEMS, META_ICONS} = useSidebarIcons();
