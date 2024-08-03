@@ -13,59 +13,12 @@ import {
   Sun,
   Swords,
 } from 'lucide-react';
+import useSidebarIcons from '@/app/(hooks)/useSidebarMenu';
 
-const menuItems = [
-  {
-    label: 'Home',
-    img: <House />,
-    path: '/',
-  },
-  {
-    label: 'Sounds',
-    img: <Mic />,
-    path: '/',
-  },
-  {
-    label: 'Battle',
-    img: <Swords />,
-    path: '/',
-  },
-  {
-    label: 'Market Place',
-    img: <Store />,
-    path: '/',
-  },
-  {
-    label: 'Menu',
-    img: <LayoutDashboard />,
-    path: '/',
-  },
-];
 
-const metaIcons = [
-  {
-    label: 'Info',
-    img: <Info />,
-    path: '/',
-  },
-  {
-    label: 'Sounds',
-    img: <Baby />,
-    path: '/',
-  },
-  {
-    label: 'Battle',
-    img: <ScrollText />,
-    path: '/',
-  },
-  {
-    label: 'Market Place',
-    img: <Sun />,
-    path: '/',
-  },
-];
 
 const Sidebar = () => {
+  const {MENU_ITEMS, META_ICONS} = useSidebarIcons();
   return (
     <div className='w-32 rounded-br-[4.5rem]  bg-secondary flex flex-col items-center py-5'>
       <Logo />
@@ -73,7 +26,7 @@ const Sidebar = () => {
       <div className='flex flex-grow flex-col justify-between'>
         {/* TOP */}
         <div className='flex flex-col gap-5 items-center px-0 py-4'>
-          {menuItems.map((item) => (
+          {MENU_ITEMS.map((item) => (
             <Tooltip key={item.label} title={item.label} placement='right-start' className=''>
               <IconButton className='text-gray-100 hover:text-gray-100'>{item.img}</IconButton>
             </Tooltip>
@@ -82,7 +35,7 @@ const Sidebar = () => {
 
         {/* BOTTOM */}
         <div className='flex flex-col gap-5 items-center px-0 py-4'>
-          {metaIcons.map((item) => (
+          {META_ICONS.map((item) => (
             <Tooltip key={item.label} title={item.label} placement='right-start' className=''>
               <IconButton className='text-gray-100 hover:text-gray-100'>{item.img}</IconButton>
             </Tooltip>

@@ -6,7 +6,7 @@ import React from 'react'
 const Hero = () => {
   return (
       <section
-      className="bg-no-repeat bg-cover h-2/4 px-12 py-9" 
+      className="flex-grow bg-no-repeat bg-cover h-2/4 px-12 py-9" 
       style={{backgroundImage: `url(/assets/background.png)`}}
       >
         <div className="flex flex-col gap-5 items-center md:flex-row md:justify-between ">
