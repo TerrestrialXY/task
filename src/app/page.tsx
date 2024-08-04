@@ -2,6 +2,8 @@ import Hero from './(components)/hero/hero';
 import Music from '@/app/(components)/widgets/music'
 import Avatar from './(components)/widgets/avatar';
 import CurrencyTracker from './(components)/widgets/currencyTracker';
+import GameStats from './(components)/widgets/gameStats';
+import Notification from './(components)/widgets/notification';
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
         <Music />
         <Avatar />
         <CurrencyTracker />
+        <GameStats />
+      <Notification />
       </aside>
     </div>
   );

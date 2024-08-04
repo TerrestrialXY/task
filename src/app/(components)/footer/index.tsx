@@ -22,7 +22,7 @@ const IconsList = ({ icons }: IconListProps) => {
               width={100}
               src={icon.icon}
               alt={icon.alt}
-              className='img-filter-invert'
+              className='invert-color'
             />
           </a>
         </div>

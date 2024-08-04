@@ -22,7 +22,7 @@ body,
   @apply text-gray-100;
 }
 
-.img-filter-invert {
+.invert-color {
   -webkit-filter: invert(1);
   filter: invert(0.75);
   }
