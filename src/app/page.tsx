@@ -1,11 +1,16 @@
 import Hero from './(components)/hero/hero';
+import Music from '@/app/(components)/widgets/music'
+import Avatar from './(components)/widgets/avatar';
+import CurrencyTracker from './(components)/widgets/currencyTracker';
 
 export default function Home() {
   return (
     <div className='w-full flex gap-5'>
       <Hero />
-      <aside className='w-80 hidden md:block'>
-        Widget section
+      <aside className='w-96 px-2 py-4 mr-10 hidden md:flex flex-col items-center justify-normal gap-10'>
+        <Music />
+        <Avatar />
+        <CurrencyTracker />
       </aside>
     </div>
   );

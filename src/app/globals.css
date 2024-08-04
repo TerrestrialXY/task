@@ -13,13 +13,13 @@ body,
 #root {
   /* variables */
   --color-primary: hwb(224 8% 72%);
-  --color-secondary: hsla(230, 45%, 26%, 0.787);
+  --color-secondary: hwb(230 14% 62% / 0.788);
 
   height: 100%;
   width: 100%;
   @apply text-sm;
   @apply bg-primary;
-  @apply text-gray-50;
+  @apply text-gray-100;
 }
 
 .img-filter-invert {
