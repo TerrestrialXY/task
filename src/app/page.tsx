@@ -1,6 +1,7 @@
 import GridWrapper from './(components)/grid/gridWrapper';
-import Hero from './(components)/banner/banner';
+import Banner from './(components)/banner/banner';
 import Widgets from './(components)/widgets';
+import MainStats from './(components)/mainStats';
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
         className='flex flex-col flex-grow bg-no-repeat bg-auto lg:bg-cover h-2/4 px-12 py-9'
         style={{ backgroundImage: `url(/assets/background.png)` }}
       >
-        <Hero />
+        <Banner />
+        <MainStats />
         <GridWrapper />
       </div>
       <Widgets />
