@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 const schema = yup
   .object({
@@ -20,12 +21,14 @@ const schema = yup
   .required();
 
 export default function Login() {
+  const [error, setError] = useState<Boolean>(false);
   const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
+    mode: 'all',
     resolver: yupResolver(schema),
     defaultValues: {
       email: 'admin@getnada.com',
@@ -35,8 +38,9 @@ export default function Login() {
 
   const onSubmit = (data: any) => {
     if (data.email == 'admin@getnada.com' && data.password == 'admin@123') {
-      router.push('/dashboard');
-    }
+     return router.push('/dashboard');
+    } 
+    setError(true)
   };
 
   return (
@@ -57,13 +61,13 @@ export default function Login() {
       </div>
       {/* RIGHT */}
       <div className='flex flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8 bg-secondary opacity-85 text-gray-50'>
-        <div className='hidden lg:block'>
+        <div>
           <Image
             alt='Your Company'
             src='/assets/warframe.svg'
             height={100}
             width={100}
-            className='mx-auto h-60 w-64 bg-center rounded-[3rem] invert bg-black brightness-150 px-6'
+            className='hidden lg:block mx-auto h-60 w-64 bg-center rounded-[3rem] invert bg-black brightness-150 px-6'
           />
           <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight '>
             Sign in to your account
@@ -129,6 +133,7 @@ export default function Login() {
             </div>
           </form>
 
+          {error && <p className='text-red-500 px-4 py-2'>Invalid email or password</p>}
           <p className='mt-3 text-center text-sm '>
             Not a member?
             <a
