@@ -1,7 +1,7 @@
-import GridWrapper from './(components)/grid/gridWrapper';
-import Banner from './(components)/banner/banner';
-import Widgets from './(components)/widgets';
-import MainStats from './(components)/mainStats';
+import GridWrapper from '../../(components)/grid/gridWrapper';
+import Banner from '../../(components)/banner/banner';
+import Widgets from '../../(components)/widgets';
+import MainStats from '../../(components)/mainStats';
 
 export default function Home() {
   return (
